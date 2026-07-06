@@ -1,0 +1,123 @@
+tier,name,category,city,device_signal,rating,review_count,revenue,employees,domain,website,linkedin,phone,apollo_id,source
+A,Anu Medical Spa,med spa,"Voorhees, NJ",microneedling,,,5M-10M,24,anumedicalspa.com,http://www.anumedicalspa.com,http://www.linkedin.com/company/anu-medical-spa,+1 856-809-0909,66f04f49db74ef0001cc0928,places_batch1
+A,BBKR Aesthetics,med spa,Philadelphia area,microneedling,,,,,,,,,,places_batch1
+A,Body+Beauty Lab,med spa,"Philadelphia + Wayne, PA",microneedling; Sculptra,,,1M-5M,21,,,,,,places_batch1
+A,Bryn Mawr Dermatology,dermatology,"Villanova, PA (4 locations)",Morpheus8,,,10.2M,38,,,,,,places_batch2
+A,Bucky Plastic Surgery,plastic surgery,"Philadelphia, PA (3 locations)",Moxi; BBL; RF microneedling,,,5M-10M,25,drbucky.com,http://www.drbucky.com,http://www.linkedin.com/company/philadelphia-plastic-surgery-louis-p-bucky-md-facs,+1 215-402-7283,54a1a68b74686942d317d204,places_batch3
+A,Cross Medical Group,plastic surgery,"Philadelphia, PA",Sciton HALO + MOXI + BBL laser stack,,,500K-1M,,,,,,,places_batch3
+A,DaVinci Med Spa,med spa,Philadelphia area,Vivace RF microneedling,,,,,,,,,,places_batch1
+A,DripNeedle,med spa,Philadelphia area,microneedling,,,,,,,,,,places_batch1
+A,Forever Young Medical Spa,med spa,"Princeton, NJ",microneedling,,,,,,,,,,places_batch1
+A,Hazel & Honey Aesthetics,med spa,Philadelphia area,microneedling,,,,,,,,,,places_batch1
+A,Joli Med Spa,med spa,Philadelphia area,microneedling,,,,,,,,,,places_batch1
+A,Lily & Oak Aesthetics,med spa,Philadelphia area,microneedling; Moxi,,,,,,,,,,places_batch1
+A,Novique Medical Aesthetics,med spa,"Doylestown, PA",microneedling,,,10M-25M,,novique.com,http://www.novique.com,http://www.linkedin.com/company/novique-medical-aesthetics,+1 267-899-5020,672471d8ab548400010e66a6,places_batch1
+A,RW Dermatology,dermatology,"Furlong, PA",Moxi + BBL laser stack (explicit in reviews),,,500K-1M,,,,,,,places_batch2
+A,Ringpfeil Advanced Dermatology,dermatology,"Haverford, PA",Vivace RF microneedling; 861+893 Google reviews,,,6.0M,44,,,,,,places_batch2
+A,Sciara Cosmetic Dermatology,dermatology,Philadelphia area,Thermage; V-Beam,,,,,,,,,,places_batch2
+A,South Jersey Skin Care & Laser Center,dermatology,"Mount Laurel, NJ",microneedling; 1576 Google reviews,,,5.4M,16,,,,,,places_batch2
+A,Yofi Med Spa,med spa,Philadelphia area,microneedling,,,,,,,,,,places_batch1
+B,Buinewicz Plastic Surgery & Spa,plastic surgery,"Doylestown, PA",CO2 laser,,,,,buinewiczplasticsurgery.com,http://www.buinewiczplasticsurgery.com,http://www.linkedin.com/company/buinewicz-plastic-surgery-&-spa,+1 215-647-9668,63d0d91952c4890001957d47,apollo_orgs_2.json
+B,Hazen Plastic Surgery and Medical Spa,plastic surgery,"Princeton, NJ",Emsculpt; Hydrafacial; full aesthetic operation,,,,,hazenplasticsurgery.com,http://www.hazenplasticsurgery.com,http://www.linkedin.com/company/hazenplasticsurgeryandaesthetics,+1 609-921-7747,5d0a1cdea3ae61be4e0f8151,apollo_orgs_1.json
+B,Lux Med Spa,med spa,Philadelphia area,CoolPeel,,,,,,,,,,places_batch1
+B,Medspa 1722,med spa,"Philadelphia, PA",Moxi,,,,,,,,,,places_batch1
+B,The Skin Retreat,med spa,Philadelphia area,Sofwave,,,,,,,,,,places_batch1
+C,"ALTA DERMATOLOGY & SKIN CARE CENTER, LLC",,,,,,,,altaskincenter.com,http://www.altaskincenter.com,http://www.linkedin.com/company/alta-dermatology-&-skin-care-center-llc,+1 856-344-2849,671492f640f40d0001b5a85c,apollo_orgs_3.json
+C,Abel Aesthetics,,,,,,,,abelaesthetics.com,http://www.abelaesthetics.com,http://www.linkedin.com/company/abel-aesthetics,+1 302-576-1110,6730e0369c24470001e2125b,apollo_orgs_3.json
+C,Abington Aesthetic,,,,,,,,abingtonaesthetic.com,http://www.abingtonaesthetic.com,http://www.linkedin.com/company/abington-aesthetic,+1 215-366-1122,54a129b769702d9b8bf1c901,apollo_orgs_2.json
+C,About Face Aesthetics (Philadelphia),,,,,,,,aboutfaceskincare.com,http://www.aboutfaceskincare.com,http://www.linkedin.com/company/about-face-skin-care-philadelphia,+1 215-923-5001,54fca4bb7369647e1d672900,apollo_orgs_1.json
+C,Advanced Dermatology Associates LTD,,,,,,,,,,http://www.linkedin.com/company/advanced-dermatology-associates-ltd,+1 610-437-4134,5f4848cc8f766600019d6e9c,apollo_orgs_1.json
+C,"Aesthetic Plastic Surgery of Delaware, PA",,,,,,,,facesandfigures.com,http://www.facesandfigures.com,http://www.linkedin.com/company/aesthetic-plastic-surgery-of-delaware-pa,+1 302-656-0214,55f720bbf3e5bb1977021bb6,apollo_orgs_1.json
+C,Aesthetics-Exchange Inc.,,,,,,,,aeon-ex.com,http://www.aeon-ex.com,http://www.linkedin.com/company/aesthetics-exchange-inc,09120234-567,69556aed8b95de00191f3c82,apollo_orgs_1.json
+C,Allure Aesthetics,,,,,,,,allureaestheticsllc.com,http://www.allureaestheticsllc.com,http://www.linkedin.com/company/allureaesthetics,+1 610-393-1253,615e8b3fec93980001981242,apollo_orgs_1.json
+C,Amazing Skin Laser & Aesthetics,,,,,,,,getamazingskincare.com,http://www.getamazingskincare.com,http://www.linkedin.com/company/amazing-skin-laser-&-aesthetics,+1 610-297-6249,59bbac7da6da98b6c3e31def,apollo_orgs_3.json
+C,American Aesthetic Association,,,,,,,,ameriaa.com,http://www.ameriaa.com,http://www.linkedin.com/company/american-aesthetic-association,+1 609-631-8228,5ed91fd92fa8840001e0a1e8,apollo_orgs_1.json
+C,Anllo Center for Aesthetics,,,,,,,,anllocenterforaesthetics.com,http://www.anllocenterforaesthetics.com,http://www.linkedin.com/company/anllo-center-for-aesthetics,+1 610-351-6605,67246b1a3ecde200015fbc71,apollo_orgs_3.json
+C,Anllo Center for Aesthetics and Wellness,,,,,,,,anllocenter.com,http://www.anllocenter.com,http://www.linkedin.com/company/anllo-center-for-aesthetics-and-wellness,+1 610-351-6605,69e2f8364c517c000148cafb,apollo_orgs_3.json
+C,Ari Blanc Medical Spa,,,,,,,,ariblancmedicalspa.com,http://www.ariblancmedicalspa.com,http://www.linkedin.com/company/ari-blanc-medical-spa,+1 267-687-7436,636dbad0645bda00e92a167c,apollo_orgs_1.json
+C,Avellina Aesthetics,,,,,,,,avellinaaesthetics.com,http://www.avellinaaesthetics.com,http://www.linkedin.com/company/avellina-aesthetics,+1 215-722-6022,65a7aa3e91876e0001729e5b,apollo_orgs_3.json
+C,BURKE DERMATOLOGY,,,,,,,,burkedermatology.com,http://www.burkedermatology.com,http://www.linkedin.com/company/burke-dermatology,+1 302-734-3376,66f821ee953cb40001f405e9,apollo_orgs_1.json
+C,Be Truly Well Integrative Health Center & Med Spa,,,,,,,,betrulywell.com,http://www.betrulywell.com,http://www.linkedin.com/company/be-truly-well-chiropractic-&-day-spa,+1 302-525-4343,5d098a80a3ae610c7ee6941a,apollo_orgs_1.json
+C,Beauty Marx Aesthetic MedSpa,,,,,,,,beautymarxmed.com,http://www.beautymarxmed.com,http://www.linkedin.com/company/beauty-marx-aesthetic-medspa,+1 215-422-3690,57c4ef7aa6da986ac7437dde,apollo_orgs_1.json
+C,Benedetto Dermatology and Dermatologic SurgiCenter,,,,,,,,,,http://www.linkedin.com/company/benedetto-dermatology-and-dermatologic-surgicenter,,671097e76bbffd000168741d,apollo_orgs_3.json
+C,Bloom Facial Plastic Surgery,,,,,,,,bloomfacialplastics.com,http://www.bloomfacialplastics.com,http://www.linkedin.com/company/bloom-facial-plastic-surgery,+1 610-854-8676,60af8c8d1794f500010c4e24,apollo_orgs_1.json
+C,Celebrity Skin Aesthetics,,,,,,,,celebrityskinaesthetics.co.uk,http://www.celebrityskinaesthetics.co.uk,http://www.linkedin.com/company/celebrity-skin-aesthetics,,6703b3a44804410001ec5cd7,apollo_orgs_3.json
+C,Chapin Aesthetics,,,,,,,,drchapin.com,http://www.drchapin.com,http://www.linkedin.com/company/chapin-aesthetics,+1 267-880-0810,54a11d0769702d77c243f800,apollo_orgs_1.json
+C,Chung & Jan Aesthetic Surgery Associates,,,,,,,,asasurgery.com,http://www.asasurgery.com,http://www.linkedin.com/company/asasurgery,+1 610-437-2378,6049e1e08a74120001763092,apollo_orgs_1.json
+C,Cloud 17 Med Spa,,,,,,,,cloud17medspa.com,http://www.cloud17medspa.com,http://www.linkedin.com/company/cloud-17-med-spa,+1 610-686-7200,67287fb6ed6bc20001942f2a,apollo_orgs_3.json
+C,"Collective Aesthetics, LLC",,,,,,,,collectiveaesthetics.com,http://www.collectiveaesthetics.com,http://www.linkedin.com/company/collective-aesthetics-llc,+1 267-391-8858,5da4c64cdcc576000147044d,apollo_orgs_3.json
+C,"Cosmetic Surgery Aftercare Services, LLC",,,,,,,,surgicalaftercare.com,http://www.surgicalaftercare.com,http://www.linkedin.com/company/cosmetic-surgery-aftercare-services-llc,+1 877-526-3454,54a11c4069702da10f6f9500,apollo_orgs_1.json
+C,Cosmetic Surgery Center of Cherry Hill,,,,,,,,ilovelyleback.com,http://www.ilovelyleback.com,http://www.linkedin.com/company/cosmetic-surgery-center-of-cherry-hill,+1 856-751-7550,5e56f0f2af8f6d000129e081,apollo_orgs_1.json
+C,"DOYLESTOWN DERMATOLOGY, LLC",,,,,,,,doylestowndermatology.com,http://www.doylestowndermatology.com,http://www.linkedin.com/company/doylestown-dermatology-llc,+1 215-345-4736,66e11ec54768670001968f2a,apollo_orgs_3.json
+C,Danowski Dermatology,,,,,,,,danowskidermatology.com,http://www.danowskidermatology.com,http://www.linkedin.com/company/danowski-dermatology,+1 856-420-6070,63e0998bc5a21d00f00d955b,apollo_orgs_1.json
+C,Danyo & Gillespie Plastic Surgery,,,,,,,,danyoplasticsurgery.com,http://www.danyoplasticsurgery.com,http://www.linkedin.com/company/danyo-plastic-surgery-and-aesthetic-medicine,+1 302-888-0508,54a1ae1b7468695860e18607,apollo_orgs_1.json
+C,Davis Cosmetic Plastic Surgery,,,,,,,,daviscps.com,http://www.daviscps.com,http://www.linkedin.com/company/davis-cosmetic-plastic-surgery,+1 856-424-1700,55eaddc2f3e5bb4548003557,apollo_orgs_1.json
+C,Dedicated Dermatology,,,,,,,,,,http://www.linkedin.com/company/dedicated-dermatology,,673dce4fb0d18c0001475824,apollo_orgs_3.json
+C,"Delaware Valley Dermatology Group, LLC",,,,,,,,,,http://www.linkedin.com/company/delaware-valley-dermatology-group-llc,+1 302-478-8532,66ec006630510300018c08d4,apollo_orgs_3.json
+C,Delaware Valley Plastic Surgery,,,,,,,,,,http://www.linkedin.com/company/delaware-valley-plastic-surgery,+1 856-797-0202,6713b362de521c0001f0f607,apollo_orgs_2.json
+C,DermaCenter Medical Spa Main Line,,,,,,,,dermacenter.com,http://www.dermacenter.com,http://www.linkedin.com/company/dermacenter-medical-spa-main-line,+1 215-735-7990,6743dc4e75054a0001c97f5a,apollo_orgs_3.json
+C,Dermacare Laser & Skin Care,,,,,,,,dermacaregainesville.com,http://www.dermacaregainesville.com,http://www.linkedin.com/company/dermacare-laser-&-skin-care,+1 352-331-5355,55eadc99f3e5bb6ec600271c,apollo_orgs_1.json
+C,"Dermaliq Therapeutics, Inc.",,,,,,,,dermaliq.com,http://www.dermaliq.com,http://www.linkedin.com/company/dermaliq-therapeutics-inc,,61ebaeb61dc64400a5944e05,apollo_orgs_1.json
+C,Dermatology & Mohs Surgery Center,,,,,,,,dermatologyandmohs.com,http://www.dermatologyandmohs.com,http://www.linkedin.com/company/dermatology-&-mohs-surgery-center,+1 215-345-6647,5a9d0817a6da98d938b8b636,apollo_orgs_1.json
+C,"Dermatology & Skin Surgery Center of Princeton, LLC",,,,,,,,johnvinemd.com,http://www.johnvinemd.com,http://www.linkedin.com/company/dermatology-skin-surgery-center-of-princeton-llc,+1 609-799-6222,5e57e9267eed1100015c959a,apollo_orgs_1.json
+C,"Dermatology of Philadelphia / Mohs Surgery Center, LLC",,,,,,,,dermofphilly.com,http://www.dermofphilly.com,http://www.linkedin.com/company/dermatology-of-philadelphia-mohs-surgery-center-llc,+1 215-315-3197,63b96df629754700012d28de,apollo_orgs_2.json
+C,Donna Scott Secret Med Spa,,,,,,,,donnascottsecret.com,http://www.donnascottsecret.com,http://www.linkedin.com/company/donna-scott-secret-med-spa,+1 267-506-3524,67400cf72e28f700011b9b1e,apollo_orgs_3.json
+C,Dr. Fisher's Medical Weight Loss & Aesthetic Centers,,,,,,,,bodybyfishernow.com,http://www.bodybyfishernow.com,http://www.linkedin.com/company/bodybyfishernow,+1 215-987-4315,5b87101df874f726b451d9a1,apollo_orgs_2.json
+C,Ehrlich Plastic Surgery,,,,,,,,ehrlichplasticsurgery.com,http://www.ehrlichplasticsurgery.com,http://www.linkedin.com/company/ehrlich-plastic-surgery,+1 215-372-5000,6730d0e28c7edd0001c12f34,apollo_orgs_3.json
+C,Emily Rockwell Skin Clinic,,,,,,,,emilyrockwellskin.com,http://www.emilyrockwellskin.com,http://www.linkedin.com/company/emily-rockwell-skin-clinic,+1 302-652-3587,65968edf8298700001fd8d9c,apollo_orgs_1.json
+C,Eminence Medical Aesthetics,,,,,,,,eminencema.com,http://www.eminencema.com,http://www.linkedin.com/company/eminence-medical,+1 609-531-4413,5e55d925e8aadf00017288cf,apollo_orgs_1.json
+C,Fillers.AI,,,,,,,,fillers.ai,http://www.fillers.ai,http://www.linkedin.com/company/fillers-ai,+1 929-352-1270,671a0a9e98eb0f03f0e6bfd5,apollo_orgs_1.json
+C,First State Med Spa,,,,,,,,firststatemedspa.com,http://www.firststatemedspa.com,http://www.linkedin.com/company/first-state-med-spa,+1 302-208-6084,65d0ea0041282900010096fd,apollo_orgs_1.json
+C,Garber Plastic Surgery,,,,,,,,garberplasticsurgery.com,http://www.garberplasticsurgery.com,http://www.linkedin.com/company/garber-plastic-surgery,+1 856-616-9200,672fe4ee0af9f60001d97d1b,apollo_orgs_3.json
+C,Gillespie Plastic Surgery,,,,,,,,gillespiemd.com,http://www.gillespiemd.com,http://www.linkedin.com/company/gillespiemd,+1 302-274-2996,6366bdd62a35b70001b6b929,apollo_orgs_1.json
+C,Green MedSpa,,,,,,,,greenmedspa.com,http://www.greenmedspa.com,http://www.linkedin.com/company/green-medspa,+1 267-584-4533,674964f6b4aca10001c2a492,apollo_orgs_3.json
+C,HOPE Medical Spa & Holistic Health Center,,,,,,,,hopemedicalspa.com,http://www.hopemedicalspa.com,http://www.linkedin.com/company/hope-medical-spa-&-holistic-health-center,+1 856-988-8230,54a260e87468693cdd13581e,apollo_orgs_1.json
+C,Horvath Aesthetics,,,,,,,,horvathaesthetics.com,http://www.horvathaesthetics.com,http://www.linkedin.com/company/horvath-aesthetics,+1 215-884-2880,672810762db1f90001ee58fa,apollo_orgs_3.json
+C,INVO Aesthetics,,,,,,,,invoaesthetics.com,http://www.invoaesthetics.com,http://www.linkedin.com/company/invo-aesthetics,+1 518-312-8968,65a95ff9b0c425043b2eefb8,apollo_orgs_1.json
+C,J. THOMAS Plastic Surgery,,,,,,,,jthomasplasticsurgery.com,http://www.jthomasplasticsurgery.com,http://www.linkedin.com/company/j-thomas-plastic-surgery,+1 267-408-2281,610090cf5e397a00f6f8881b,apollo_orgs_2.json
+C,Jazzi Cosmetic Surgery & Aesthetic Medicine,,,,,,,,jazzi.co,http://www.jazzi.co,http://www.linkedin.com/company/jazzi-cosmetic-surgery-aesthetic-medicine,,63d5c68395712a0001ccdcd6,apollo_orgs_1.json
+C,Jefferson Plastic Surgery,,,,,,,,jeffersonplasticsurgery.com,http://www.jeffersonplasticsurgery.com,http://www.linkedin.com/company/jefferson-plastic-surgery%20,+1 215-625-6630,67175301d9e9ba000181cdf4,apollo_orgs_2.json
+C,"John Lee, Md, Facs - Bryn Mawr Facial Aesthetics Center",,,,,,,,drjohnleesurgery.com,http://www.drjohnleesurgery.com,,+1 610-789-6701,6735795137d3ac0001e62c3e,apollo_orgs_3.json
+C,Journal of the Dermatology Nurses' Association,,,,,,,,,,http://www.linkedin.com/company/journal-of-the-dermatology-nurses-association,,5fc95695fd48100001b4970c,apollo_orgs_1.json
+C,"KEYSTONE DERMATOLOGY PARTNERS, LLC",,,,,,,,keydermpartners.com,http://www.keydermpartners.com,http://www.linkedin.com/company/keystone-dermatology-partners-llc,+1 215-999-3376,66f28f8694a942000134d6cf,apollo_orgs_3.json
+C,Kessel Dermatology,,,,,,,,kesseldermatology.com,http://www.kesseldermatology.com,http://www.linkedin.com/company/kessel-dermatology,+1 609-890-2600,63ca80d2a1a5580001b9e08f,apollo_orgs_1.json
+C,"Kirk Lozada, MD, Facial Plastic Surgery",,,,,,,,drkirklozada.com,http://www.drkirklozada.com,http://www.linkedin.com/company/kirk-lozada-md-facial-plastic-surgery,+1 267-817-4600,67262c60bc3eb400013931e8,apollo_orgs_3.json
+C,LIGHT Medspa,,,,,,,,lightmedspa.com,http://www.lightmedspa.com,http://www.linkedin.com/company/light-medspa,+1 215-693-2929,670df277a0674400018f4085,apollo_orgs_2.json
+C,Lavish Wellness & Aesthetics,,,,,,,,livelavishde.com,http://www.livelavishde.com,http://www.linkedin.com/company/livelavishde,+1 302-604-3448,642be3def9c09c00a37282e9,apollo_orgs_2.json
+C,Lohner Plastic Surgery,,,,,,,,lohnerplasticsurgery.com,http://www.lohnerplasticsurgery.com,http://www.linkedin.com/company/lohner-plastic-surgery,+1 610-519-0600,55921c7a73696418d2237500,apollo_orgs_3.json
+C,Lunamé Medical Aesthetics,,,,,,,,luname.com,http://www.luname.com,http://www.linkedin.com/company/gambhircosmeticmedicine,+1 610-518-7546,5e58379cd2bd680001c98335,apollo_orgs_1.json
+C,"MACAIONE & PAPA DERMATOLOGY ASSOC, PA",,,,,,,,,,http://www.linkedin.com/company/macaione-&-papa-dermatology-assoc-pa,,6731950124c32c0001d29c07,apollo_orgs_3.json
+C,MC Elite Aesthetics,,,,,,,,mceliteaesthetics.com,http://www.mceliteaesthetics.com,http://www.linkedin.com/company/mc-elite-aesthetics,+1 689-200-7584,66d3b96d3f06c50001fe6e74,apollo_orgs_3.json
+C,"MONTGOMERY DERMATOLOGY, LLC",,,,,,,,,,http://www.linkedin.com/company/montgomery-dermatology-llc,,66e60de6cc58520001b1c968,apollo_orgs_3.json
+C,"MagnifaSkin MedSpa | Medical Spa in Wilmington, DE",,,,,,,,magnifaskinmedspa.com,http://www.magnifaskinmedspa.com,http://www.linkedin.com/company/magnifaskin-medspa-medical-spa-in-wilmington-de,+1 302-505-1000,66f8e2763ca77f0001c797a6,apollo_orgs_2.json
+C,Main Line Plastic Surgery,,,,,,,,mainlineplasticsurgery.com,http://www.mainlineplasticsurgery.com,http://www.linkedin.com/company/main-line-plastic-surgery,+1 484-222-0010,55ea61a8f3e5bb595800838e,apollo_orgs_1.json
+C,Marchant Plastic Surgery,,,,,,,,marchantplasticsurgery.com,http://www.marchantplasticsurgery.com,http://www.linkedin.com/company/marchant-plastic-surgery,+1 215-230-0400,673c3462a898240001fbeb06,apollo_orgs_3.json
+C,MedSpa LeadPro,,,,,,,,medspaleadpro.com,http://www.medspaleadpro.com,http://www.linkedin.com/company/medspa-leadpro,,68a277ad9ec86b000d59a072,apollo_orgs_3.json
+C,Meesha Aesthetics,,,,,,,,botoxbymeesha.com,http://www.botoxbymeesha.com,http://www.linkedin.com/company/meesha-aesthetics,,61ec48fb11611b000176545b,apollo_orgs_1.json
+C,Monarch Medspa,,,,,,,,monarchmedspa.com,http://www.monarchmedspa.com,http://www.linkedin.com/company/monarch-medspa,+1 610-337-7662,67153d33ffc31700016a6a74,apollo_orgs_3.json
+C,Moon Beauty Aesthetics,,,,,,,,phibrowsglobal.com,http://www.phibrowsglobal.com,http://www.linkedin.com/company/moon-beauty-aesthetics,,6713b50833a88400017924a7,apollo_orgs_3.json
+C,NJ ENT and Facial Plastic Surgery,,,,,,,,njent.com,http://www.njent.com,http://www.linkedin.com/company/nj-ent-and-facial-plastic-surgery,,6372440131131f00a3353093,apollo_orgs_2.json
+C,"PENNSYLVANIA CENTRE FOR DERMATOLOGY, LLC",,,,,,,,,,http://www.linkedin.com/company/pennsylvania-centre-for-dermatology-llc,+1 267-519-0154,5a9cf40ca6da98d970137236,apollo_orgs_2.json
+C,"PHILADELPHIA CENTER FOR DERMATOLOGY, PC",,,,,,,,philaderm.com,http://www.philaderm.com,http://www.linkedin.com/company/philadelphia-center-for-dermatology-pc,+1 267-538-5045,6643439419b0e500019a70ae,apollo_orgs_3.json
+C,Panzer Dermatology Assoc,,,,,,,,,,http://www.linkedin.com/company/panzer-dermatology-assoc,,55923da87369641b339cb000,apollo_orgs_3.json
+C,Premier Spa and Laser Center,,,,,,,,premierspaandlasercenter.com,http://www.premierspaandlasercenter.com,http://www.linkedin.com/company/premier-spa-and-laser-center-210,+1 302-633-4772,5e5781b3f0173400016030d5,apollo_orgs_2.json
+C,Rejuven Aesthetics,,,,,,,,rejuvenaesthetics.com,http://www.rejuvenaesthetics.com,http://www.linkedin.com/company/rejuven-aesthetics,,66ee894d758a070001c44bbf,apollo_orgs_3.json
+C,Rosen Cosmetic Surgery,,,,,,,,rosencosmetic.com,http://www.rosencosmetic.com,http://www.linkedin.com/company/rosen-cosmetic-surgery,+1 267-247-5345,54a1d6d97468695c82999914,apollo_orgs_1.json
+C,Serenity Aesthetics & Wellness Medical Spa,,,,,,,,serenityawmedspa.com,http://www.serenityawmedspa.com,http://www.linkedin.com/company/serenity-aesthetics-wellness-medical-spa,+1 215-278-6638,699456bc222eae00010d814f,apollo_orgs_2.json
+C,Skin House Facial Bar,,,,,,,,,,http://www.linkedin.com/company/skin-haus,+1 215-201-3953,5e55d08ae25fca00012cffb0,apollo_orgs_2.json
+C,Society Hill Dermatology,,,,,,,,,,http://www.linkedin.com/company/society-hill-dermatology,+1 267-519-0154,55f85770f3e5bb7cfd000128,apollo_orgs_3.json
+C,South Shore Plastic Surgery,,,,,,,,drvasisht.com,http://www.drvasisht.com,http://www.linkedin.com/company/south-shore-plastic-surgery,+1 856-784-2639,559213367369644785cb3100,apollo_orgs_2.json
+C,StarkMD Plastic Surgery and Aesthetic Center,,,,,,,,starkmdplasticsurgery.com,http://www.starkmdplasticsurgery.com,http://www.linkedin.com/company/starkmd-plastic-surgery-and-aesthetic-center,+1 484-482-8809,6707af9bc2665500019cde05,apollo_orgs_2.json
+C,Suite 200 Med Spa,,,,,,,,suite200medspa.com,http://www.suite200medspa.com,http://www.linkedin.com/company/suite-200-med-spa,,674045f680e0bb00011f13a9,apollo_orgs_3.json
+C,Taylor’d Aesthetics Studio,,,,,,,,taylordaesthetic.com,http://www.taylordaesthetic.com,http://www.linkedin.com/company/taylordaestheticsstudio,,678c0b96762fc00001e31428,apollo_orgs_3.json
+C,The Abel Center for Oculofacial Plastic Surgery,,,,,,,,abelcenter.com,http://www.abelcenter.com,http://www.linkedin.com/company/the-abel-center-for-oculofacial-plastic-surgery,+1 302-998-3220,5fca3349b42f4d00011ed693,apollo_orgs_3.json
+C,"The American Board of Plastic Surgery, Inc.",,,,,,,,abplasticsurgery.org,http://www.abplasticsurgery.org,http://www.linkedin.com/company/the-american-board-of-plastic-surgery-inc,+1 215-587-9322,60c710536aee900130be1946,apollo_orgs_1.json
+C,"The Center for Oral, Maxillofacial & Facial Cosmetic Surgery",,,,,,,,speraoms.com,http://www.speraoms.com,http://www.linkedin.com/company/the-center-for-oral-maxillofacial-&-facial-cosmetic-surgery,+1 302-475-1122,66ebd0d5747174000153ec8a,apollo_orgs_3.json
+C,The Garden Medical Spa,,,,,,,,thegardenmedspa.com,http://www.thegardenmedspa.com,http://www.linkedin.com/company/the-garden-medical-spa,+1 727-610-5335,66dd1fbbe6fec9000144e987,apollo_orgs_2.json
+C,The Institute for Laser & Aesthetic Medicine,,,,,,,,ilamed.com,http://www.ilamed.com,http://www.linkedin.com/company/the-institute-for-laser-&-aesthetic-medicine,+1 215-230-1804,54a1341569702d333d5a1700,apollo_orgs_1.json
+C,The Journal of Clinical and Aesthetic Dermatology,,,,,,,,jcadonline.com,http://www.jcadonline.com,http://www.linkedin.com/company/the-journal-of-clinical-and-aesthetic-dermatology,+1 866-325-9907,6632cb62fb7662030042c1d1,apollo_orgs_1.json
+C,"The Nutritional Aesthetics Alliance, LLC",,,,,,,,skinwellnesspro.com,http://www.skinwellnesspro.com,http://www.linkedin.com/company/the-nutritional-aesthetics-alliance-llc,,55e910b8f3e5bb6f0e000373,apollo_orgs_1.json
+C,The Princeton Center for Plastic Surgery,,,,,,,,princetonsurgery.com,http://www.princetonsurgery.com,http://www.linkedin.com/company/the-princeton-center-for-plastic-surgery,+1 609-921-7161,54fca4bc7369647df82f2600,apollo_orgs_1.json
+C,"Turner Dermatology, P.C.",,,,,,,,turnerderm.com,http://www.turnerderm.com,http://www.linkedin.com/company/turnerderm,+1 610-525-3800,5f49a478f31bf10001e2da69,apollo_orgs_1.json
+C,Vive Aesthetics & Wellness,,,,,,,,vivecenter.com,http://www.vivecenter.com,http://www.linkedin.com/company/viveaestheticsandwellness,+1 856-988-8483,5e57e37242a70300015ed834,apollo_orgs_1.json
+C,medspa810,,,,,,,,medspa810.com,http://www.medspa810.com,http://www.linkedin.com/company/medspa810,+1 833-733-4100,5db3fea3593a740001266fcc,apollo_orgs_1.json
