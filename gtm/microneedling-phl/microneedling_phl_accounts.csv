@@ -1,21 +1,21 @@
 tier,name,category,city,device_signal,rating,review_count,revenue,employees,domain,website,linkedin,phone,apollo_id,source
-A,Anu Medical Spa,med spa,"Voorhees, NJ",microneedling,,,5M-10M,24,anumedicalspa.com,http://www.anumedicalspa.com,http://www.linkedin.com/company/anu-medical-spa,+1 856-809-0909,66f04f49db74ef0001cc0928,places_batch1
+A,Anu Medical Spa,med spa,"Voorhees, NJ",Secret RF; microneedling w/ Salmon DNA; Laser Genesis; Pico Genesis; Excel V; IPL (Clay-verified from site),,,5M-10M,24,anumedicalspa.com,http://www.anumedicalspa.com,http://www.linkedin.com/company/anu-medical-spa,+1 856-809-0909,66f04f49db74ef0001cc0928,places_batch1
 A,BBKR Aesthetics,med spa,Philadelphia area,microneedling,,,,,,,,,,places_batch1
-A,Body+Beauty Lab,med spa,"Philadelphia + Wayne, PA",microneedling; Sculptra,,,1M-5M,21,,,,,,places_batch1
-A,Bryn Mawr Dermatology,dermatology,"Villanova, PA (4 locations)",Morpheus8,,,10.2M,38,,,,,,places_batch2
-A,Bucky Plastic Surgery,plastic surgery,"Philadelphia, PA (3 locations)",Moxi; BBL; RF microneedling,,,5M-10M,25,drbucky.com,http://www.drbucky.com,http://www.linkedin.com/company/philadelphia-plastic-surgery-louis-p-bucky-md-facs,+1 215-402-7283,54a1a68b74686942d317d204,places_batch3
-A,Cross Medical Group,plastic surgery,"Philadelphia, PA",Sciton HALO + MOXI + BBL laser stack,,,500K-1M,,,,,,,places_batch3
+A,Body+Beauty Lab,med spa,"Philadelphia + Wayne, PA",microneedling; Sculptra (review intel; no devices on site),,,1M-5M,21,,,,,,places_batch1
+A,Bryn Mawr Dermatology,dermatology,"Villanova, PA (4 locations)",Rejuvapen microneedling pen; Morpheus8; MultiFrax; CO2 laser (Clay-verified from site),,,10.2M,38,,,,,,places_batch2
+A,Bucky Plastic Surgery,plastic surgery,"Philadelphia, PA (3 locations)",Morpheus8; EndyMed Intensif RF microneedling; Moxi; EmpowerRF; FaceTite (Clay-verified from site),,,5M-10M,25,drbucky.com,http://www.drbucky.com,http://www.linkedin.com/company/philadelphia-plastic-surgery-louis-p-bucky-md-facs,+1 215-402-7283,54a1a68b74686942d317d204,places_batch3
+A,Cross Medical Group,plastic surgery,"Philadelphia, PA",SkinPen (Clay-verified from site); Sciton HALO/MOXI/BBL (reviews),,,500K-1M,,,,,,,places_batch3
 A,DaVinci Med Spa,med spa,Philadelphia area,Vivace RF microneedling,,,,,,,,,,places_batch1
 A,DripNeedle,med spa,Philadelphia area,microneedling,,,,,,,,,,places_batch1
 A,Forever Young Medical Spa,med spa,"Princeton, NJ",microneedling,,,,,,,,,,places_batch1
 A,Hazel & Honey Aesthetics,med spa,Philadelphia area,microneedling,,,,,,,,,,places_batch1
 A,Joli Med Spa,med spa,Philadelphia area,microneedling,,,,,,,,,,places_batch1
 A,Lily & Oak Aesthetics,med spa,Philadelphia area,microneedling; Moxi,,,,,,,,,,places_batch1
-A,Novique Medical Aesthetics,med spa,"Doylestown, PA",microneedling,,,10M-25M,,novique.com,http://www.novique.com,http://www.linkedin.com/company/novique-medical-aesthetics,+1 267-899-5020,672471d8ab548400010e66a6,places_batch1
-A,RW Dermatology,dermatology,"Furlong, PA",Moxi + BBL laser stack (explicit in reviews),,,500K-1M,,,,,,,places_batch2
-A,Ringpfeil Advanced Dermatology,dermatology,"Haverford, PA",Vivace RF microneedling; 861+893 Google reviews,,,6.0M,44,,,,,,places_batch2
+A,Novique Medical Aesthetics,med spa,"Doylestown, PA",microneedling (review intel; no devices on site),,,10M-25M,,novique.com,http://www.novique.com,http://www.linkedin.com/company/novique-medical-aesthetics,+1 267-899-5020,672471d8ab548400010e66a6,places_batch1
+A,RW Dermatology,dermatology,"Furlong, PA",Moxi + BBL laser stack (review intel; not on site),,,500K-1M,,,,,,,places_batch2
+A,Ringpfeil Advanced Dermatology,dermatology,"Haverford, PA",Infini RF microneedling; PicoSure; AviClear; MiraDry (Clay-verified from site),,,6.0M,44,,,,,,places_batch2
 A,Sciara Cosmetic Dermatology,dermatology,Philadelphia area,Thermage; V-Beam,,,,,,,,,,places_batch2
-A,South Jersey Skin Care & Laser Center,dermatology,"Mount Laurel, NJ",microneedling; 1576 Google reviews,,,5.4M,16,,,,,,places_batch2
+A,South Jersey Skin Care & Laser Center,dermatology,"Mount Laurel, NJ",Secret RF (Secret DUO); Vivace; EdgeONE CO2; Pearl; Laser Genesis; IPL (Clay-verified from site),,,5.4M,16,,,,,,places_batch2
 A,Yofi Med Spa,med spa,Philadelphia area,microneedling,,,,,,,,,,places_batch1
 B,Buinewicz Plastic Surgery & Spa,plastic surgery,"Doylestown, PA",CO2 laser,,,,,buinewiczplasticsurgery.com,http://www.buinewiczplasticsurgery.com,http://www.linkedin.com/company/buinewicz-plastic-surgery-&-spa,+1 215-647-9668,63d0d91952c4890001957d47,apollo_orgs_2.json
 B,Hazen Plastic Surgery and Medical Spa,plastic surgery,"Princeton, NJ",Emsculpt; Hydrafacial; full aesthetic operation,,,,,hazenplasticsurgery.com,http://www.hazenplasticsurgery.com,http://www.linkedin.com/company/hazenplasticsurgeryandaesthetics,+1 609-921-7747,5d0a1cdea3ae61be4e0f8151,apollo_orgs_1.json
