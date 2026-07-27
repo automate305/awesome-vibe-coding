@@ -76,10 +76,43 @@ Status mapping: `New→NEW`, `No Answer`/`Voicemail`→`ATTEMPTED_TO_CONTACT`,
 `Connected`→`CONNECTED`, `Nurture`→`BAD_TIMING`, `Meeting Booked`→`OPEN_DEAL`,
 `Not Interested`→`UNQUALIFIED`. Anything unrecognized falls back to `NEW`.
 
-**Deduping:** contacts match on email when present, otherwise on phone. Companies
-match on exact name. Re-pushing the same list updates rather than duplicates, and
-an identical note is not added twice — safe to hit Push repeatedly during a call
-session.
+**Deduping** — two things about your portal (245205090) shaped this logic:
+
+1. Your phones are stored as `+1 305-681-8800`. Searching the raw `phone`
+   property for a digit string returns nothing, so matching uses
+   `hs_searchable_calculated_phone_number`, HubSpot's normalized copy.
+2. **Phone alone is not unique in your data** — 11 of your existing contacts
+   share `+1 305-681-8800` (a shared main line). Matching on phone alone would
+   have overwritten a real person with whoever you pushed.
+
+So: contacts match on **email** when present, otherwise on **phone AND last
+name** together. Companies match on exact name. Re-pushing the same list updates
+rather than duplicates, and an identical note is not added twice — safe to hit
+Push repeatedly during a call session.
+
+You already have **530 contacts** loaded (Jul 25), **94 of them without an
+email** — that's your Clay enrichment target.
+
+---
+
+## Terminal fallback (no browser)
+
+If `patch-feed.mjs` can't match your markup, this path still gets contacts into
+HubSpot. Same client, same dedupe, same mapping — it just skips the HTML.
+
+```bash
+# See exactly how the CSV maps, without sending anything
+node hubspot/push-csv.mjs "/Users/camilog/Desktop/DBPR HVAC Import Script - Cursor/data/leads/dbpr-hvac-filtered.csv" --dry-run
+
+# Push 3 first and eyeball them in HubSpot
+node hubspot/push-csv.mjs leads.csv --limit 3
+
+# Then the rest
+node hubspot/push-csv.mjs leads.csv
+```
+
+Headers are matched loosely (`company`/`business`/`dba`, `owner`/`licensee`/
+`contact`, `city`/`area`, …), and it reports any field it couldn't map.
 
 ---
 
