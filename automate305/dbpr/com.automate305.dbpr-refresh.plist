@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Automate305 DBPR weekly refresh.
+
+  Runs every Monday at 06:00. launchd uses the Mac's local wall clock, so this
+  follows Miami time through EST/EDT changes without any adjustment. If the Mac
+  is asleep or off at 06:00, RunAtLoad plus launchd's missed-interval catch-up
+  means the job fires shortly after the next wake.
+
+  Install:  cp com.automate305.dbpr-refresh.plist ~/Library/LaunchAgents/
+  Load:     launchctl load ~/Library/LaunchAgents/com.automate305.dbpr-refresh.plist
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.automate305.dbpr-refresh</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/zsh</string>
+        <string>-lc</string>
+        <string>"$HOME/Desktop/DBPR HVAC Import Script - Cursor/scripts/dbpr-refresh.sh"</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Weekday</key>
+        <integer>1</integer>
+        <key>Hour</key>
+        <integer>6</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/camilog/Library/Logs/automate305-dbpr.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/camilog/Library/Logs/automate305-dbpr.log</string>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/camilog/Desktop/DBPR HVAC Import Script - Cursor</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <key>LANG</key>
+        <string>en_US.UTF-8</string>
+    </dict>
+
+    <key>ProcessType</key>
+    <string>Background</string>
+
+    <key>LowPriorityIO</key>
+    <true/>
+</dict>
+</plist>

@@ -1,0 +1,181 @@
+{
+  "name": "Automate305 — Nurture (HubSpot call_outcome = Nurture)",
+  "flow": [
+    {
+      "id": 1,
+      "module": "hubspotcrm:watchObjectPropertyChange",
+      "version": 3,
+      "parameters": {
+        "__IMTCONN__": null,
+        "objectType": "contacts",
+        "propertyName": "call_outcome",
+        "limit": 20
+      },
+      "mapper": {},
+      "metadata": {
+        "designer": { "x": 0, "y": 0 },
+        "restore": {
+          "__IMTCONN__": { "label": "Assign your HubSpot connection on import" },
+          "parameters": {
+            "objectType": { "label": "Contact" },
+            "propertyName": { "label": "Call Outcome" }
+          }
+        },
+        "interface": [
+          { "name": "objectId", "type": "text", "label": "Contact ID" },
+          { "name": "propertyValue", "type": "text", "label": "New value" },
+          { "name": "email", "type": "email", "label": "Email" },
+          { "name": "firstname", "type": "text", "label": "First name" },
+          { "name": "lastname", "type": "text", "label": "Last name" },
+          { "name": "company", "type": "text", "label": "Company" }
+        ],
+        "notes": "Free-tier polling trigger. If your Make plan allows it, a HubSpot workflow webhook fires faster."
+      }
+    },
+    {
+      "id": 2,
+      "module": "builtin:BasicRouter",
+      "version": 1,
+      "parameters": {},
+      "mapper": null,
+      "metadata": {
+        "designer": { "x": 300, "y": 0 }
+      },
+      "routes": [
+        {
+          "flow": [
+            {
+              "id": 3,
+              "module": "builtin:BasicFeeder",
+              "version": 1,
+              "parameters": {},
+              "filter": {
+                "name": "Only Nurture",
+                "conditions": [
+                  [
+                    {
+                      "a": "{{1.propertyValue}}",
+                      "b": "Nurture",
+                      "o": "text:equal:ci"
+                    }
+                  ]
+                ]
+              },
+              "mapper": { "array": "{{1}}" },
+              "metadata": {
+                "designer": { "x": 600, "y": 0 },
+                "notes": "Guard so only Nurture outcomes continue."
+              }
+            },
+            {
+              "id": 4,
+              "module": "builtin:Sleep",
+              "version": 1,
+              "parameters": {},
+              "mapper": { "delay": "300" },
+              "metadata": {
+                "designer": { "x": 900, "y": 0 },
+                "notes": "Make's Sleep module caps at 300 seconds — it cannot wait 2 days. Use ONE of the two real options below and then delete this module:\n\nOption A (free tier, recommended): change this scenario's schedule to run daily, and change module 1 to a Search Contacts filtered on call_outcome = Nurture AND hs_lastmodifieddate more than 2 days ago AND nurture_email_sent is empty. Then set nurture_email_sent = today in a final Update Contact step so nobody gets it twice.\n\nOption B (paid): replace this with the 'Sleep until' / scheduled-resume approach, or hand the 2-day wait to a HubSpot workflow delay."
+              }
+            },
+            {
+              "id": 5,
+              "module": "google-email:ActionSendEmail",
+              "version": 1,
+              "parameters": {
+                "__IMTCONN__": null
+              },
+              "mapper": {
+                "to": ["{{1.email}}"],
+                "subject": "Quick thought for {{1.company}}",
+                "contentType": "html",
+                "html": "<p>Hi {{1.firstname}},</p><p>Appreciate you taking my call the other day. Timing wasn't right, and that's fine — I'm not going to keep dialing you.</p><p>One thing worth sitting on: most of the HVAC shops I work with in Miami-Dade and Broward were losing 20&ndash;30% of inbound calls to voicemail during peak season, and every one of those is a booked job going to whoever picks up next. We fix that with an AI receptionist that answers in English or Spanish, books straight into your dispatch calendar, and texts the customer a confirmation.</p><p>When the phones start getting away from you again, reply to this email and I'll show you what it looks like in about 15 minutes: <a href=\"https://cal.com/automate305/30min\">cal.com/automate305/30min</a></p><p>Cam Gonzalez<br>Automate305<br>automate305.com</p>",
+                "attachments": []
+              },
+              "metadata": {
+                "designer": { "x": 1200, "y": 0 },
+                "restore": {
+                  "__IMTCONN__": { "label": "Assign your cam@automate305.com Gmail connection on import" }
+                }
+              }
+            },
+            {
+              "id": 6,
+              "module": "hubspotcrm:createEngagement",
+              "version": 3,
+              "parameters": {
+                "__IMTCONN__": null
+              },
+              "mapper": {
+                "engagementType": "TASK",
+                "subject": "Call {{1.firstname}} {{1.lastname}} in 14 days",
+                "body": "Nurture follow-up.\n\nCompany: {{1.company}}\nOutcome on last call: Nurture\nNurture email sent: {{formatDate(now; \"YYYY-MM-DD\")}}\n\nOpen with what changed since last time — new season, new trucks, hiring. Do not re-pitch cold.",
+                "status": "NOT_STARTED",
+                "priority": "MEDIUM",
+                "timestamp": "{{addDays(now; 14)}}",
+                "associations": {
+                  "contactIds": ["{{1.objectId}}"]
+                }
+              },
+              "metadata": {
+                "designer": { "x": 1500, "y": 0 },
+                "restore": {
+                  "__IMTCONN__": { "label": "Assign your HubSpot connection on import" }
+                }
+              }
+            },
+            {
+              "id": 7,
+              "module": "hubspotcrm:updateContact",
+              "version": 3,
+              "parameters": {
+                "__IMTCONN__": null
+              },
+              "mapper": {
+                "contactId": "{{1.objectId}}",
+                "properties": {
+                  "hs_lead_status": "BAD_TIMING"
+                }
+              },
+              "metadata": {
+                "designer": { "x": 1800, "y": 0 },
+                "restore": {
+                  "__IMTCONN__": { "label": "Assign your HubSpot connection on import" }
+                },
+                "notes": "Stamps the contact so the daily-run version of this scenario doesn't email them twice."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "instant": false,
+    "version": 1,
+    "scenario": {
+      "roundtrips": 1,
+      "maxErrors": 3,
+      "autoCommit": true,
+      "autoCommitTriggerLast": true,
+      "sequential": false,
+      "slots": null,
+      "confidential": false,
+      "dataloss": false,
+      "dlq": false,
+      "freshVariables": false
+    },
+    "designer": { "orphans": [] },
+    "zone": "us1.make.com",
+    "scheduling": {
+      "type": "indefinitely",
+      "interval": 900
+    },
+    "notes": [
+      {
+        "moduleIds": [1],
+        "content": "Automate305 Scenario 2. After import: (1) assign the HubSpot and Gmail connections, (2) read the note on module 4 — Make's Sleep tops out at 5 minutes, so the 2-day wait needs the daily-run pattern described there, (3) create the call_outcome custom property first by running the prospect-feed bridge's /ensure-properties once."
+      }
+    ]
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "name": "Automate305 — Meeting Booked (Cal.com → HubSpot)",
+  "flow": [
+    {
+      "id": 1,
+      "module": "gateway:CustomWebHook",
+      "version": 1,
+      "parameters": {
+        "hook": null,
+        "maxResults": 1
+      },
+      "mapper": {},
+      "metadata": {
+        "designer": { "x": 0, "y": 0 },
+        "restore": {
+          "parameters": {
+            "hook": { "label": "Cal.com booking confirmed" }
+          }
+        },
+        "parameters": [
+          {
+            "name": "hook",
+            "type": "hook:gateway-webhook",
+            "label": "Webhook",
+            "required": true
+          },
+          { "name": "maxResults", "type": "number", "label": "Maximum number of results" }
+        ],
+        "interface": [
+          { "name": "attendee_name", "type": "text", "label": "Attendee name" },
+          { "name": "attendee_email", "type": "email", "label": "Attendee email" },
+          { "name": "attendee_phone", "type": "text", "label": "Attendee phone" },
+          { "name": "start_time", "type": "date", "label": "Meeting start" },
+          { "name": "meeting_url", "type": "text", "label": "Meeting URL" },
+          { "name": "company_name", "type": "text", "label": "Company" }
+        ],
+        "notes": "Point Cal.com at this URL: cal.com → Settings → Developer → Webhooks → BOOKING_CREATED. Set the payload to include attendee_name, attendee_email, attendee_phone, start_time, meeting_url."
+      }
+    },
+    {
+      "id": 2,
+      "module": "hubspotcrm:searchObjects",
+      "version": 3,
+      "parameters": {
+        "__IMTCONN__": null
+      },
+      "mapper": {
+        "limit": "1",
+        "objectType": "contacts",
+        "outputProperties": ["email", "firstname", "lastname", "phone", "hs_lead_status"],
+        "filterGroups": [
+          {
+            "filters": [
+              {
+                "propertyName": "email",
+                "operator": "EQ",
+                "value": "{{1.attendee_email}}"
+              }
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "designer": { "x": 300, "y": 0 },
+        "restore": {
+          "__IMTCONN__": { "label": "Assign your HubSpot connection on import" }
+        },
+        "notes": "Finds the contact Cam already pushed from the prospect feed."
+      }
+    },
+    {
+      "id": 3,
+      "module": "hubspotcrm:updateContact",
+      "version": 3,
+      "parameters": {
+        "__IMTCONN__": null
+      },
+      "mapper": {
+        "contactId": "{{2.id}}",
+        "properties": {
+          "hs_lead_status": "OPEN_DEAL",
+          "call_outcome": "Meeting Booked",
+          "lifecyclestage": "salesqualifiedlead"
+        }
+      },
+      "metadata": {
+        "designer": { "x": 600, "y": 0 },
+        "restore": {
+          "__IMTCONN__": { "label": "Assign your HubSpot connection on import" }
+        },
+        "notes": "call_outcome is the custom property created by the prospect-feed bridge."
+      }
+    },
+    {
+      "id": 4,
+      "module": "google-email:ActionSendEmail",
+      "version": 1,
+      "parameters": {
+        "__IMTCONN__": null
+      },
+      "mapper": {
+        "to": ["{{1.attendee_email}}"],
+        "subject": "Confirmed: our call on {{formatDate(1.start_time; \"dddd, MMMM D [at] h:mm A\"; \"America/New_York\")}}",
+        "contentType": "html",
+        "html": "<p>Hi {{first(split(1.attendee_name; \" \"))}},</p><p>Great speaking with you. You're on my calendar for <strong>{{formatDate(1.start_time; \"dddd, MMMM D [at] h:mm A\"; \"America/New_York\")}}</strong> Miami time.</p><p>Join link: <a href=\"{{1.meeting_url}}\">{{1.meeting_url}}</a></p><p>I'll come ready with a couple of concrete ways shops your size are cutting missed calls and after-hours booking gaps. If anything comes up, just reply here and we'll move it.</p><p>Talk soon,<br>Cam Gonzalez<br>Automate305<br>automate305.com</p>",
+        "attachments": []
+      },
+      "metadata": {
+        "designer": { "x": 900, "y": 0 },
+        "restore": {
+          "__IMTCONN__": { "label": "Assign your cam@automate305.com Gmail connection on import" }
+        },
+        "notes": "Sends from cam@automate305.com. Swap the module for email:ActionSendEmail if you'd rather use SMTP."
+      }
+    },
+    {
+      "id": 5,
+      "module": "hubspotcrm:createEngagement",
+      "version": 3,
+      "parameters": {
+        "__IMTCONN__": null
+      },
+      "mapper": {
+        "engagementType": "TASK",
+        "subject": "Prep for call — {{1.attendee_name}}",
+        "body": "Discovery call booked via Cal.com.\n\nCompany: {{1.company_name}}\nPhone: {{1.attendee_phone}}\nEmail: {{1.attendee_email}}\nMeeting: {{1.meeting_url}}\n\nBefore the call: pull their Google reviews, check current after-hours answering setup, note their service area.",
+        "status": "NOT_STARTED",
+        "priority": "HIGH",
+        "timestamp": "{{addHours(1.start_time; -2)}}",
+        "associations": {
+          "contactIds": ["{{2.id}}"]
+        }
+      },
+      "metadata": {
+        "designer": { "x": 1200, "y": 0 },
+        "restore": {
+          "__IMTCONN__": { "label": "Assign your HubSpot connection on import" }
+        },
+        "notes": "Task lands 2 hours before the meeting."
+      }
+    }
+  ],
+  "metadata": {
+    "instant": true,
+    "version": 1,
+    "scenario": {
+      "roundtrips": 1,
+      "maxErrors": 3,
+      "autoCommit": true,
+      "autoCommitTriggerLast": true,
+      "sequential": false,
+      "slots": null,
+      "confidential": false,
+      "dataloss": false,
+      "dlq": false,
+      "freshVariables": false
+    },
+    "designer": { "orphans": [] },
+    "zone": "us1.make.com",
+    "notes": [
+      {
+        "moduleIds": [1],
+        "content": "Automate305 Scenario 1. After import: (1) assign the HubSpot and Gmail connections, (2) copy this webhook's URL into Cal.com as a BOOKING_CREATED webhook, (3) run once with a test booking before switching it on."
+      }
+    ]
+  }
+}
