@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "devils-advocate": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/devils-advocate/SKILL.md",
+      "computedHash": "8c8cf12616b322a73ebda168620729ec3ea6c70e1541cb3397afe81ae257e483"
+    }
+  }
+}
