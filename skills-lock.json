@@ -1,11 +1,197 @@
 {
   "version": 1,
   "skills": {
+    "ai-personalization-prompts": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/ai-personalization-prompts/SKILL.md",
+      "computedHash": "07cf62e638608f05908d112182dfb2ade47400fca474ab5d5864e18fce7843d1"
+    },
+    "atl-btl-messaging": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/atl-btl-messaging/SKILL.md",
+      "computedHash": "48fa4a77d8a0076d7fc49bb422bbb46ba5e2b7243d5f2c9a7d1311693bce1f67"
+    },
+    "bridgebound-firmographic-15": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/bridgebound-firmographic-15/SKILL.md",
+      "computedHash": "4193cec9e6baea5bf792e20b317230b0e44b5e8c9dd61530d0554ed414fee897"
+    },
+    "bridgebound-history-16": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/bridgebound-history-16/SKILL.md",
+      "computedHash": "8f8010ec8c2f63a34fbaa6d2580e773950a0e7111379f84818a1d978ca5df68e"
+    },
+    "bridgebound-in-market-20": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/bridgebound-in-market-20/SKILL.md",
+      "computedHash": "34ff43d441bbff856620efb56c148b1527c4f50e2a26dbae0cdaf9c79b1ef9b2"
+    },
+    "bridgebound-relationship-39": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/bridgebound-relationship-39/SKILL.md",
+      "computedHash": "b834d5e34cf69c468501fed810f63a72c0854faeaa79651308fddd7e8fc4e4af"
+    },
+    "bridgebound-symptoms-11": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/bridgebound-symptoms-11/SKILL.md",
+      "computedHash": "7afd0675d56765867492111dcc98a8d4efba76fb99b17fdfa1dd11802913b1bb"
+    },
+    "buying-signals-6": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/buying-signals-6/SKILL.md",
+      "computedHash": "c6b8487be8c59e2e69320e8db000e851432a908b94e8ae32c89cecc32f791162"
+    },
+    "cold-call-scripts": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/cold-call-scripts/SKILL.md",
+      "computedHash": "17f45572b7f00be14929cd959bb1f555458ea9f39df9d2bfbc16efd3e0ac20f2"
+    },
+    "cold-email-4-sequence": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/cold-email-4-sequence/SKILL.md",
+      "computedHash": "f382a26ca53552afd6069f66eba9ea90c51abc61218f07c59358f6df7f61aa20"
+    },
+    "cold-email-templates-34": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/cold-email-templates-34/SKILL.md",
+      "computedHash": "92c846c86e3de0124aa200d947b89032095354476cb160a7ffd890212e6694c9"
+    },
+    "coldiq-messaging-templates": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/coldiq-messaging-templates/SKILL.md",
+      "computedHash": "6199e7c85e3008d3603bc17e20d3aa64ab0dd1e7d876c4b745d7de49e9e6982f"
+    },
     "devils-advocate": {
       "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
       "sourceType": "github",
       "skillPath": "skills/devils-advocate/SKILL.md",
       "computedHash": "8c8cf12616b322a73ebda168620729ec3ea6c70e1541cb3397afe81ae257e483"
+    },
+    "email-1-variations-7": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/email-1-variations-7/SKILL.md",
+      "computedHash": "7b12745a141fe43060308602dffabb89775a8172f0477aa5bb9df0e4816901dd"
+    },
+    "email-metrics-benchmarks": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/email-metrics-benchmarks/SKILL.md",
+      "computedHash": "8124d35bcbeae5e60e4f9ade382cd3558767e6894aa039e8daa55f736fdc5bab"
+    },
+    "email-writing-frameworks": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/email-writing-frameworks/SKILL.md",
+      "computedHash": "8c5e2afffcbdd787d5015fa6f4dbbd9c3fca89e9dca44ba97b814fe20cc20921"
+    },
+    "gtm-philosophy": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/gtm-philosophy/SKILL.md",
+      "computedHash": "85f2a8b5eec8af09deaab704ea07e4fbae097da2c08046f7ce488462091cd262"
+    },
+    "gtm-plays-11": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/gtm-plays-11/SKILL.md",
+      "computedHash": "b8f8ea439f9e2c038d06d35a16f934cc6a78e29df3afc05eaa1085448bb9c5fa"
+    },
+    "inbound-triggers-30": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/inbound-triggers-30/SKILL.md",
+      "computedHash": "ba4add589ffd63150d1c2b4a97eb0e0af4977e9500ae08a4c9b04bc685391afd"
+    },
+    "josh-braun-copywriting": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/josh-braun-copywriting/SKILL.md",
+      "computedHash": "11d6a589963c14b55150249d7304b16824b87ad31318fceea36fdd52c5d67843"
+    },
+    "lead-sources-guide": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/lead-sources-guide/SKILL.md",
+      "computedHash": "d41b2fc932ad484b07c6edfa387b91e246b66aac14c99f0a2b161540538e63ae"
+    },
+    "linkedin-campaign-complete": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/linkedin-campaign-complete/SKILL.md",
+      "computedHash": "475be1945ee90371d5801b326707d2f7ab1dcde6f8f22b5a4e9bd03c02a8ae9a"
+    },
+    "linkedin-limits-warmup": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/linkedin-limits-warmup/SKILL.md",
+      "computedHash": "950fa49fd1916baa57108c587bf83a6e80a7da0d56d3407dfd909e43aa2a2df5"
+    },
+    "linkedin-success-factors": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/linkedin-success-factors/SKILL.md",
+      "computedHash": "7938ef09785ffb1c5cee2cd903a378a06dea979d60ae53bf0d7697c13cc307c0"
+    },
+    "list-building-tips": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/list-building-tips/SKILL.md",
+      "computedHash": "c5f244ae575e78ef0b32d42bc9032744d3eb15a9492b0b21197709f44800441c"
+    },
+    "outbound-triggers-6": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/outbound-triggers-6/SKILL.md",
+      "computedHash": "de0e5da4a5b33cfe6ea3aa76dcedf6f7a8380df6fd753032135fc87141159c1f"
+    },
+    "outreach-4-categories": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/outreach-4-categories/SKILL.md",
+      "computedHash": "5cfac275c35bfc95af3793e8e7bd63cfdb85ba9e8565ea52d6e704bd8c2c016e"
+    },
+    "personalization-6-buckets": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/personalization-6-buckets/SKILL.md",
+      "computedHash": "2c8aa8deef75ee8a1b71505489511fe0b140eb5b6ae72c60e29840d4e6c505fe"
+    },
+    "personalization-hooks": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/personalization-hooks/SKILL.md",
+      "computedHash": "64418546906026c5ad572bb24ed58a9e09308068e9f5c32316eee0f5dc3ce2b9"
+    },
+    "personalization-playbooks": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/personalization-playbooks/SKILL.md",
+      "computedHash": "e76230635b47c926bdd3b7b69eb7fb8fdaf88225f0f28348038024c392772e70"
+    },
+    "sdr-master-prompts": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/sdr-master-prompts/SKILL.md",
+      "computedHash": "5045a0548fcf59358b2bd93bb827d3e23b055af131f184992f0fc9e05a9d2a13"
+    },
+    "sdr-outbound-rules": {
+      "source": "Cold-IQ/ColdIQ-s-GTM-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/sdr-outbound-rules/SKILL.md",
+      "computedHash": "3f92701065c511c8d1948bd1750cffb2ea30a6d342ea2c20b803479efa816082"
     }
   }
 }
