@@ -1,0 +1,19 @@
+{
+  "queries": [
+    "What are the top 20 HVAC companies in the New York City metro area? My zip code is 10001 - if you can scrape out to a 25-mile radius, that'd be great. At least 3.7 google review rating. Both, residential and commercial, but I really want to go after the big guys that do high-rises and condominiums here in Midtown Manhattan.",
+    "What are the top 20 HVAC companies in the Chicago metro area? My zip code is 60601 - if you can scrape out to a 25-mile radius, that'd be great. At least 3.7 google review rating. Both, residential and commercial, but I really want to go after the big guys that do high-rises and condominiums here in the Loop and downtown.",
+    "What are the top 20 HVAC companies in the Los Angeles metro area? My zip code is 90012 - if you can scrape out to a 25-mile radius, that'd be great. At least 3.7 google review rating. Both, residential and commercial, but I really want to go after the big guys that do high-rises and condominiums here in downtown LA.",
+    "What are the top 20 HVAC companies in the Houston metro area? My zip code is 77002 - if you can scrape out to a 25-mile radius, that'd be great. At least 3.7 google review rating. Both, residential and commercial, but I really want to go after the big guys that do high-rises and condominiums here in downtown Houston.",
+    "What are the top 20 HVAC companies in the Dallas-Fort Worth metro area? My zip code is 75201 - if you can scrape out to a 25-mile radius, that'd be great. At least 3.7 google review rating. Both, residential and commercial, but I really want to go after the big guys that do high-rises and condominiums here in Uptown Dallas.",
+    "What are the top 20 HVAC companies in the Atlanta metro area? My zip code is 30303 - if you can scrape out to a 25-mile radius, that'd be great. At least 3.7 google review rating. Both, residential and commercial, but I really want to go after the big guys that do high-rises and condominiums here in Midtown and Buckhead.",
+    "What are the top 20 HVAC companies in the Phoenix metro area? My zip code is 85004 - if you can scrape out to a 25-mile radius, that'd be great. At least 3.7 google review rating. Both, residential and commercial, but I really want to go after the big guys that do high-rises and condominiums here in downtown Phoenix and Scottsdale.",
+    "What are the top 20 HVAC companies in the Las Vegas metro area? My zip code is 89101 - if you can scrape out to a 25-mile radius, that'd be great. At least 3.7 google review rating. Both, residential and commercial, but I really want to go after the big guys that do high-rises and condominiums here on the Strip and downtown.",
+    "What are the top 20 HVAC companies in the Denver metro area? My zip code is 80202 - if you can scrape out to a 25-mile radius, that'd be great. At least 3.7 google review rating. Both, residential and commercial, but I really want to go after the big guys that do high-rises and condominiums here in downtown Denver and LoDo.",
+    "What are the top 20 HVAC companies in the San Diego metro area? My zip code is 92101 - if you can scrape out to a 25-mile radius, that'd be great. At least 3.7 google review rating. Both, residential and commercial, but I really want to go after the big guys that do high-rises and condominiums here in downtown San Diego and the Gaslamp Quarter."
+  ],
+  "resultsPerPage": 10,
+  "maxPagesPerQuery": 3,
+  "countryCode": "US",
+  "languageCode": "en",
+  "mobileResults": false
+}
