@@ -7,7 +7,7 @@ Zero spray-and-pray. Every touch is earned with research.
 
 | Field | Value |
 |-------|-------|
-| Sender | Camilo, Automate305 (camilo.advisor@gmail.com) |
+| Sender | Camilo, Automate305 (cam@automate305.com) |
 | Target | HVAC companies in South Florida |
 | Geo | Miami 33128 (40mi radius), Broward County, Palm Beach County |
 | ICP | Owners/Presidents/CEOs of residential + commercial HVAC shops, 1-200 employees |
