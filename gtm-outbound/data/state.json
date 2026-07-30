@@ -1,0 +1,17 @@
+{
+  "daily": {
+    "date": "2026-07-30",
+    "searched": 0,
+    "enriched": 0,
+    "emails_sent": 0,
+    "emails_drafted": 0
+  },
+  "processed_ids": [],
+  "queue": [],
+  "stats": {
+    "total_searched": 0,
+    "total_enriched": 0,
+    "total_emails_sent": 0,
+    "total_contacts_created": 0
+  }
+}
