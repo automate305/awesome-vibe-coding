@@ -117,10 +117,14 @@ For Sequence B prospects, write TWO sentences + identify a `pain_point` (see ema
 
 **Step D — Build queue entry:**
 
+Strip legal suffixes from company names before storing: remove ", Inc.", ", Inc",
+", LLC", ", LLC.", ", Corp.", ", Corp", ", Co.", ", L.P." and similar. The clean
+name is used in subject lines and email copy. HubSpot stores the full legal name separately.
+
 ```json
 {
   "apollo_id": "<org id>",
-  "company": "<company name>",
+  "company": "<company name, legal suffix removed>",
   "domain": "<domain>",
   "first_name": "<contact first>",
   "last_name": "<contact last>",
