@@ -4,7 +4,11 @@
     "searched": 33,
     "enriched": 16,
     "emails_sent": 6,
-    "emails_drafted": 16
+    "emails_drafted": 16,
+    "calls_made": 0,
+    "linkedin_sent": 0,
+    "replies_received": 0,
+    "meetings_booked": 0
   },
   "last_search_page": 2,
   "processed_ids": [
@@ -440,10 +444,24 @@
       "linkedin_no_accept": false
     }
   ],
+  "sequences": {
+    "A": { "name": "Offer-Led", "count": 3, "emails_sent": 3, "opens": 0, "replies": 0, "meetings": 0, "closed_won": 0 },
+    "B": { "name": "ROI-Led", "count": 13, "emails_sent": 13, "opens": 0, "replies": 0, "meetings": 0, "closed_won": 0 }
+  },
   "stats": {
     "total_searched": 33,
     "total_enriched": 16,
     "total_emails_sent": 6,
-    "total_contacts_created": 16
+    "total_contacts_created": 16,
+    "total_calls": 0,
+    "total_linkedin_sent": 0,
+    "total_replies": 0,
+    "total_meetings": 0,
+    "total_closed_won": 0,
+    "total_closed_lost": 0,
+    "total_pipeline_value": 0,
+    "avg_deal_size": 0,
+    "monthly_retainer_revenue": 0,
+    "close_rate": 0
   }
 }
