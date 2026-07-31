@@ -106,7 +106,14 @@ Use any of these angles (pick the most relevant):
 - No website: "Noticed {{company}} doesn't have a website yet — that's a big opportunity on the table."
 - Hiring signal: "Saw {{company}} is hiring — growth mode usually means the back-office is getting stretched thin."
 
-Keep it to ONE sentence. This is the only LLM-generated content per prospect.
+Keep it to ONE sentence for Sequence A prospects.
+For Sequence B prospects, write TWO sentences + identify a `pain_point` (see email-sequence-b.md).
+
+**Step C.5 — Assign A/B sequence:**
+
+- No website OR weak website → Sequence A (free website carrot is relevant)
+- Has decent website + Google reviews ≥ 4.0 → Sequence B (ROI angle, no website offer)
+- All others → alternate A/B (even queue index = A, odd = B) to build test data
 
 **Step D — Build queue entry:**
 
@@ -129,6 +136,7 @@ Keep it to ONE sentence. This is the only LLM-generated content per prospect.
   "status": "active",
   "hubspot_id": null,
   "added_date": "<today>",
+  "sequence": "A or B",
   "linkedin_requested": false,
   "linkedin_requested_date": null,
   "linkedin_accepted": false,
@@ -177,11 +185,19 @@ Batch up to 10 contacts per HubSpot call to minimize API calls.
 
 For each queue entry where `next_touch` ≤ today AND `status` = "active":
 
-1. Determine which email template to use based on `step`:
-   - step 0 → "opener" (Email 1 from `gtm-outbound/copy/email-sequence.md`)
-   - step 2 → "proof" (Email 2)
-   - step 4 → "free_website" (Email 3)
-   - step 6 → "breakup" (Email 4)
+1. Determine which email template to use based on `step` AND `sequence` (A or B):
+
+   **Sequence A** (`gtm-outbound/copy/email-sequence.md`):
+   - step 0 → "opener"
+   - step 2 → "proof"
+   - step 4 → "free_website"
+   - step 6 → "breakup"
+
+   **Sequence B** (`gtm-outbound/copy/email-sequence-b.md`):
+   - step 0 → "research_drop" (deeper personalization, 2 sentences + pain point)
+   - step 2 → "numbers" (ROI stats)
+   - step 4 → "peer_move" (competitor FOMO)
+   - step 6 → "direct_ask" (calendar link CTA)
 
 2. Fill template variables:
    - `{{first_name}}` → queue entry first_name
