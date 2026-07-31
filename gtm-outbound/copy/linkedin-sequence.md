@@ -25,7 +25,7 @@ LINKEDIN CONNECTION REQUESTS — {{date}}
 
 **Note to paste (300 char max):**
 ```
-Hey {{first_name}} — fellow South Florida business owner here. I work with HVAC companies on automating ops. Would love to connect and swap notes on the market down here.
+Hey {{first_name}}, fellow South Florida business owner here. I work with HVAC companies on automating ops. Would love to connect and swap notes on the market down here.
 ```
 
 **After sending:** Mark as done in the task list. The routine tracks that
@@ -45,7 +45,7 @@ LINKEDIN FOLLOW-UPS (accepted connections) — {{date}}
 ```
 Thanks for connecting, {{first_name}}.
 
-I help HVAC shops automate scheduling, dispatch, and customer follow-ups so owners aren't glued to the phone all day. If you're ever curious what that looks like, happy to walk you through it — no pitch, just a quick demo.
+I help HVAC shops automate scheduling, dispatch, and customer follow-ups so owners aren't glued to the phone all day. If you're ever curious what that looks like, happy to walk you through it. No pitch, just a quick demo.
 
 Either way, great to be connected.
 ```

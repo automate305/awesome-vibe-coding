@@ -99,12 +99,15 @@ enrich: true
 Write ONE sentence referencing something specific about this company.
 Use any of these angles (pick the most relevant):
 
-- Google review score: "Saw {{company}} has a 4.5-star rating — your customers clearly love the work."
-- Years in business: "{{company}} has been serving Miami for over 15 years — that kind of track record is rare."
-- Service area: "Noticed {{company}} covers all of Broward County — that's a big territory to manage."
-- Website quality: "Took a look at {{company}}'s website — a few tweaks could help it convert more visitors into booked calls."
-- No website: "Noticed {{company}} doesn't have a website yet — that's a big opportunity on the table."
-- Hiring signal: "Saw {{company}} is hiring — growth mode usually means the back-office is getting stretched thin."
+- Google review score: "Saw {{company}} has a 4.5-star rating. Your customers clearly love the work."
+- Years in business: "{{company}} has been serving Miami for over 15 years. That kind of track record is rare."
+- Service area: "Noticed {{company}} covers all of Broward County. That's a big territory to manage."
+- Website quality: "Took a look at {{company}}'s website. A few tweaks could help it convert more visitors into booked calls."
+- No website: "Noticed {{company}} doesn't have a website yet. That's a big opportunity on the table."
+- Hiring signal: "Saw {{company}} is hiring. Growth mode usually means the back-office is getting stretched thin."
+
+**NEVER use em dashes (—) in any email copy or personalized lines.** Use periods,
+commas, or colons instead. "--" is OK sparingly (max once per email) but periods are preferred.
 
 Keep it to ONE sentence for Sequence A prospects.
 For Sequence B prospects, write TWO sentences + identify a `pain_point` (see email-sequence-b.md).
