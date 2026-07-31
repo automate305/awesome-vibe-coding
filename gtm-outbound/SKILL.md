@@ -128,7 +128,11 @@ Keep it to ONE sentence. This is the only LLM-generated content per prospect.
   "next_touch": "<today>",
   "status": "active",
   "hubspot_id": null,
-  "added_date": "<today>"
+  "added_date": "<today>",
+  "linkedin_requested": false,
+  "linkedin_requested_date": null,
+  "linkedin_accepted": false,
+  "linkedin_no_accept": false
 }
 ```
 
@@ -200,8 +204,14 @@ For each queue entry where `next_touch` ≤ today AND `status` = "active":
    - `next_touch` → today + delay from sequence config
    - Increment `daily.emails_sent` and `daily.emails_drafted`
 
-**Skip non-email steps** (LinkedIn, phone) — just advance the step counter
-and output them as manual task lists in Phase 5.
+**Non-email steps are manual** (LinkedIn and phone):
+- LinkedIn (steps 1, 5): Output as manual task list in Phase 5.
+  Do NOT auto-advance the step — Camilo marks these done manually.
+  Track `linkedin_requested` and `linkedin_accepted` flags on queue entries.
+  If a connection request has been pending 14+ days with no acceptance,
+  set `linkedin_no_accept: true` and advance to the next step automatically.
+- Phone (step 3): Output as call list in Phase 5. Advance step after outputting
+  (calls are time-boxed, prospect moves to next email regardless).
 
 ---
 
