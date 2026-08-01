@@ -1,5 +1,5 @@
 """
-ColdIQ API client — unified access to 14 B2B enrichment services.
+ColdIQ API client — unified access to B2B enrichment services.
 Base URL: https://api.coldiq.com/v1/{service}/{endpoint}
 Auth: Bearer token (COLDIQ_API_KEY env var)
 """
@@ -76,6 +76,21 @@ class ColdIQ:
             payload["location"] = location
         return self._post("ai-ark/people", payload)
 
+    def blitzapi_search(self, company_linkedin_url, titles, locations=None, max_results=10):
+        """BlitzAPI: ICP keyword search — find people by title at a company."""
+        cascade_entry = {
+            "include_title": titles,
+            "exclude_title": ["Intern"],
+            "include_headline_search": True,
+        }
+        if locations:
+            cascade_entry["location"] = locations
+        return self._post("blitzapi/search/waterfall-icp-keyword", {
+            "company_linkedin_url": company_linkedin_url,
+            "cascade": [cascade_entry],
+            "max_results": max_results,
+        })
+
     def wiza_reveal(self, linkedin_url, enrichment_level="partial", accept_personal=False):
         """Wiza: reveal contact from LinkedIn URL."""
         return self._post("wiza/individual-reveals", {
@@ -103,12 +118,12 @@ class ColdIQ:
             "email": email,
         })
 
-    def icypeas_find(self, first_name, last_name, domain):
+    def icypeas_find(self, first_name, last_name, domain_or_company):
         """Icypeas: find email address."""
         return self._post("icypeas/email-search", {
-            "first_name": first_name,
-            "last_name": last_name,
-            "domain": domain,
+            "firstname": first_name,
+            "lastname": last_name,
+            "domainOrCompany": domain_or_company,
         })
 
     # ── PHONE & FULL ENRICHMENT ──────────────────────────────────
@@ -117,7 +132,7 @@ class ColdIQ:
         """FullEnrich: email + phone enrichment (bulk endpoint, single contact)."""
         if enrich_fields is None:
             enrich_fields = ["contact.emails", "contact.phones"]
-        result = self._post("fullenrich/contact/enrich/bulk", {
+        return self._post("fullenrich/contact/enrich/bulk", {
             "name": "gtm-enrichment",
             "data": [{
                 "first_name": first_name,
@@ -126,39 +141,38 @@ class ColdIQ:
                 "enrich_fields": enrich_fields,
             }],
         })
-        return result
 
     def fullenrich_by_linkedin(self, linkedin_url, enrich_fields=None):
         """FullEnrich: enrich via LinkedIn URL."""
         if enrich_fields is None:
             enrich_fields = ["contact.emails", "contact.phones"]
-        result = self._post("fullenrich/contact/enrich/bulk", {
+        return self._post("fullenrich/contact/enrich/bulk", {
             "name": "gtm-enrichment",
             "data": [{
                 "linkedin_url": linkedin_url,
                 "enrich_fields": enrich_fields,
             }],
         })
-        return result
 
-    def blitzapi_enrich(self, linkedin_url):
-        """BlitzAPI: LinkedIn profile enrichment."""
-        return self._post("blitzapi/enrich", {
-            "linkedin_url": linkedin_url,
+    def linkup_enrich(self, first_name, last_name, company_name):
+        """LinkUp API: person enrichment by name + company."""
+        return self._post("linkupapi/data/profil/enrich", {
+            "first_name": first_name,
+            "last_name": last_name,
+            "company_name": company_name,
         })
 
     # ── COMPANY ENRICHMENT ───────────────────────────────────────
 
     def company_enrich(self, domain):
-        """CompanyEnrich: full company profile from domain."""
-        return self._post("companyenrich/enrich", {
-            "domain": domain,
-        })
+        """CompanyEnrich: full company profile from domain (GET request)."""
+        return self._get("companyenrich/companies/enrich", params={"domain": domain})
 
-    def linkup_company(self, domain):
-        """LinkUp API: company intelligence."""
-        return self._post("linkup/company", {
-            "domain": domain,
+    def sumble_find(self, filters, limit=10):
+        """Sumble: find organizations by filters (technologies, etc)."""
+        return self._post("sumble/organizations/find", {
+            "filters": filters,
+            "limit": limit,
         })
 
     def ocean_company(self, domain):
@@ -167,20 +181,30 @@ class ColdIQ:
             "domain": domain,
         })
 
-    def sumble_company(self, domain):
-        """Sumble: company matching and enrichment."""
-        return self._post("sumble/company", {
-            "domain": domain,
-        })
-
     # ── WEB & SOCIAL INTELLIGENCE ────────────────────────────────
 
-    def reddit_search(self, query, subreddit=None):
-        """Reddit: search posts and comments."""
-        payload = {"query": query}
-        if subreddit:
-            payload["subreddit"] = subreddit
-        return self._post("reddit/search", payload)
+    def reddit_scrape(self, subreddit_url, search_type="posts", sort="hot", max_items=10):
+        """Reddit: scrape posts/comments from a subreddit."""
+        return self._post("reddit/scrape", {
+            "startUrls": [{"url": subreddit_url}],
+            "searchType": search_type,
+            "sort": sort,
+            "maxItems": max_items,
+        })
+
+    def serper_search(self, query, num=10, page=1, gl="us", hl="en", location=None):
+        """Serper: Google search results."""
+        payload = {
+            "q": query,
+            "num": num,
+            "page": page,
+            "gl": gl,
+            "hl": hl,
+            "autocorrect": False,
+        }
+        if location:
+            payload["location"] = location
+        return self._post("serper/search", payload)
 
     def exa_search(self, query):
         """Exa: AI-powered web search."""
@@ -188,10 +212,11 @@ class ColdIQ:
             "query": query,
         })
 
-    def adyntel_search(self, domain):
-        """Adyntel: ad intelligence for a domain."""
-        return self._post("adyntel/search", {
-            "domain": domain,
+    def adyntel_facebook(self, company_domain, country_code="US"):
+        """Adyntel: Facebook ad intelligence for a domain."""
+        return self._post("adyntel/facebook", {
+            "company_domain": company_domain,
+            "country_code": country_code,
         })
 
     def discolike_search(self, domain):
@@ -249,7 +274,7 @@ class ColdIQ:
 
         return None
 
-    def enrich_contact_full(self, first_name, last_name, domain, linkedin_url=None):
+    def enrich_contact_full(self, first_name, last_name, domain, linkedin_url=None, company_name=None):
         """Full enrichment pipeline for a single contact.
         Returns dict with email, phone, company_data, and enrichment sources used.
         """
@@ -266,7 +291,7 @@ class ColdIQ:
             result["email"] = email_result["email"]
             result["sources_used"].append(f"email:{email_result['source']}")
 
-        # Phone (via FullEnrich or BlitzAPI)
+        # Phone (via FullEnrich or LinkUp)
         try:
             if linkedin_url:
                 fe = self.fullenrich_by_linkedin(linkedin_url,
@@ -282,16 +307,16 @@ class ColdIQ:
                     result["sources_used"].append("phone:fullenrich")
         except Exception:
             try:
-                if linkedin_url:
-                    ba = self.blitzapi_enrich(linkedin_url)
-                    phone = ba.get("phone")
+                if company_name:
+                    lu = self.linkup_enrich(first_name, last_name, company_name)
+                    phone = lu.get("phone")
                     if phone:
                         result["phone"] = phone
-                        result["sources_used"].append("phone:blitzapi")
+                        result["sources_used"].append("phone:linkup")
             except Exception:
                 pass
 
-        # Company enrichment
+        # Company enrichment (GET endpoint)
         try:
             result["company_data"] = self.company_enrich(domain)
             result["sources_used"].append("company:companyenrich")
