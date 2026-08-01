@@ -655,8 +655,28 @@
     }
   ],
   "sequences": {
-    "A": { "name": "Offer-Led", "count": 3, "emails_sent": 3, "opens": 0, "replies": 0, "meetings": 0, "closed_won": 0 },
-    "B": { "name": "ROI-Led", "count": 21, "emails_sent": 21, "opens": 0, "replies": 0, "meetings": 0, "closed_won": 0 }
+    "A": {
+      "name": "Offer-Led",
+      "apollo_sequence_id": "6a6e1d562a35ed000c341301",
+      "apollo_sequence_name": "HVAC South Florida — Sequence A (Offer-Led)",
+      "count": 3,
+      "emails_sent": 3,
+      "opens": 0,
+      "replies": 0,
+      "meetings": 0,
+      "closed_won": 0
+    },
+    "B": {
+      "name": "ROI-Led",
+      "apollo_sequence_id": "6a6e1d224e1f10000cf2045e",
+      "apollo_sequence_name": "HVAC South Florida — Sequence B (ROI-Led)",
+      "count": 21,
+      "emails_sent": 21,
+      "opens": 0,
+      "replies": 0,
+      "meetings": 0,
+      "closed_won": 0
+    }
   },
   "stats": {
     "total_searched": 43,
