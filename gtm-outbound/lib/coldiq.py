@@ -102,6 +102,31 @@ class ColdIQ:
             },
         })
 
+    def leadsfactory_search(self, company_linkedin_urls=None, company_domains=None,
+                             personas=None, name="GTM Outbound", max_persona_results=3,
+                             webhook_url=None, custom_metadata=None):
+        """LeadsFactory: find contacts at companies by persona criteria."""
+        payload = {
+            "name": name,
+            "search": {
+                "max_persona_results": max_persona_results,
+                "personas": personas or [{"job_title": "Owner", "seniority": ["Director", "VP", "C-suite"]}],
+            },
+        }
+        if company_linkedin_urls:
+            payload["company_linkedin_urls"] = company_linkedin_urls
+        if company_domains:
+            payload["company_domains"] = company_domains
+        if webhook_url:
+            payload["webhook_url"] = webhook_url
+        if custom_metadata:
+            payload["custom_metadata"] = custom_metadata
+        return self._post("leadsfactory/contact-finder/searches", payload)
+
+    def lemlist_campaigns(self):
+        """Lemlist: list all campaigns."""
+        return self._get("lemlist/campaigns")
+
     # ── EMAIL FINDING & VERIFICATION ─────────────────────────────
 
     def findymail_find(self, first_name, last_name, domain):
