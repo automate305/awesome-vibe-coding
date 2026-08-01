@@ -200,6 +200,10 @@ class ColdIQ:
             "limit": limit,
         })
 
+    def predictleads_company(self, domain):
+        """PredictLeads: company intelligence (hiring signals, tech stack, growth indicators)."""
+        return self._get(f"predictleads/companies/{domain}")
+
     def ocean_company(self, domain):
         """Ocean: company data enrichment."""
         return self._post("ocean/company", {
