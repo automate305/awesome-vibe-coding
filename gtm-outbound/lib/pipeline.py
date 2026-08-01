@@ -124,6 +124,25 @@ def run_pipeline(max_contacts=15):
             except Exception as e:
                 print(f"    Company enrich failed: {e}")
 
+            # Google Ads intelligence — qualification + personalization signal
+            ad_intel = None
+            try:
+                ads_result = ciq.google_ads_search([domain])
+                ads = ads_result.get("ads", ads_result.get("results", []))
+                if ads:
+                    ad_intel = {
+                        "is_running_ads": True,
+                        "ad_count": len(ads),
+                        "headlines": [a.get("headline", a.get("title", "")) for a in ads[:3]],
+                        "descriptions": [a.get("description", "") for a in ads[:3]],
+                    }
+                    print(f"    Google Ads: {len(ads)} active ads found — warm lead")
+                else:
+                    ad_intel = {"is_running_ads": False, "ad_count": 0}
+                    print(f"    Google Ads: no active ads")
+            except Exception as e:
+                print(f"    Google Ads check failed: {e}")
+
             # Find decision maker via AI Ark people search
             contact = None
             try:
@@ -198,6 +217,7 @@ def run_pipeline(max_contacts=15):
                 "title": contact.get("title", ""),
                 "linkedin_url": linkedin_url or "",
                 "company_data": company_data,
+                "ad_intel": ad_intel,
                 "page_found": page,
             })
 
