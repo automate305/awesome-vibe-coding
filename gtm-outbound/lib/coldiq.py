@@ -228,6 +228,12 @@ class ColdIQ:
             "country_code": country_code,
         })
 
+    def dataforseo_youtube_locations(self, country_iso_code="US"):
+        """DataForSEO: get YouTube SERP locations for a country."""
+        return self._post("dataforseo/serp/youtube/locations", {
+            "country_iso_code": country_iso_code,
+        })
+
     def discolike_search(self, domain):
         """DiscoLike: discover similar companies/sites."""
         return self._post("discolike/search", {
