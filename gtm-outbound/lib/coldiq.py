@@ -206,10 +206,19 @@ class ColdIQ:
             payload["location"] = location
         return self._post("serper/search", payload)
 
-    def exa_search(self, query):
-        """Exa: AI-powered web search."""
+    def exa_search(self, query, num_results=10, include_text=True):
+        """Exa: AI-powered web search with content extraction."""
         return self._post("exa/search", {
             "query": query,
+            "numResults": num_results,
+            "contents": {"text": include_text},
+        })
+
+    def google_ads_search(self, domains, max_ads=50):
+        """Google Ads: find active ads for domains — reveals messaging, offers, landing pages."""
+        return self._post("google-ads/search", {
+            "domains": domains,
+            "maxAds": max_ads,
         })
 
     def adyntel_facebook(self, company_domain, country_code="US"):
