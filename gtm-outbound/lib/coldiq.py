@@ -225,6 +225,23 @@ class ColdIQ:
             "domain": domain,
         })
 
+    def openmart_search(self, query, city=None, state=None, country="US", limit=10, has_website=True):
+        """OpenMart: local business search by query and location."""
+        payload = {
+            "query": query,
+            "limit": limit,
+            "has_website": has_website,
+        }
+        if city or state:
+            payload["location"] = {
+                "country": country,
+            }
+            if city:
+                payload["location"]["city"] = city
+            if state:
+                payload["location"]["state"] = state
+        return self._post("openmart/search", payload)
+
     # ── WATERFALL ENRICHMENT ─────────────────────────────────────
 
     def find_email_waterfall(self, first_name, last_name, domain, linkedin_url=None):
