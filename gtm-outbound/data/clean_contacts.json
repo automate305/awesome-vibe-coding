@@ -1,0 +1,71 @@
+[
+  {
+    "id": 528436095724,
+    "firstname": "Antonio",
+    "lastname": "Suau",
+    "email": "tony@dadesupercoolac.com",
+    "phone": "+13058987215",
+    "company": "Dade Super Cool Air Conditioning, INC.",
+    "jobtitle": "",
+    "city": "",
+    "state": "Florida",
+    "linkedin_url": "",
+    "hs_lead_status": "",
+    "lifecyclestage": "lead",
+    "needs_enrichment": [
+      "jobtitle"
+    ]
+  },
+  {
+    "id": 528463993538,
+    "firstname": "Ed",
+    "lastname": "Llosent",
+    "email": "",
+    "phone": "+17862366182",
+    "company": "Airtech Air Conditioning",
+    "jobtitle": "",
+    "city": "",
+    "state": "Florida",
+    "linkedin_url": "",
+    "hs_lead_status": "",
+    "lifecyclestage": "lead",
+    "needs_enrichment": [
+      "email",
+      "jobtitle"
+    ]
+  },
+  {
+    "id": 520536956622,
+    "firstname": "Kevin",
+    "lastname": "Belanger",
+    "email": "kbelanger@dac-hvac.com",
+    "phone": "",
+    "company": "Dynamic Air",
+    "jobtitle": "VP of Service",
+    "city": "",
+    "state": "Florida",
+    "linkedin_url": "",
+    "hs_lead_status": "NEW",
+    "lifecyclestage": "lead",
+    "needs_enrichment": [
+      "phone"
+    ]
+  },
+  {
+    "id": 520605838023,
+    "firstname": "John",
+    "lastname": "Jordan",
+    "email": "jjordan@miinclp.net",
+    "phone": "",
+    "company": "MIINC Mechanical Contractors",
+    "jobtitle": "President",
+    "city": "",
+    "state": "Florida",
+    "linkedin_url": "",
+    "hs_lead_status": "NEW",
+    "lifecyclestage": "lead",
+    "needs_enrichment": [
+      "phone"
+    ]
+  }
+]
