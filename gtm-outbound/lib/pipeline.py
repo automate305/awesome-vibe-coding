@@ -143,7 +143,7 @@ def run_pipeline(max_contacts=15):
             except Exception as e:
                 print(f"    Google Ads check failed: {e}")
 
-            # Find decision maker via AI Ark people search
+            # Find decision maker — try AI Ark first, then LeadsFactory
             contact = None
             try:
                 people = ciq.find_people_aiark(
@@ -153,9 +153,24 @@ def run_pipeline(max_contacts=15):
                 candidates = people.get("results", people.get("data", []))
                 if candidates:
                     contact = candidates[0]
-                    print(f"    Contact: {contact.get('first_name', '')} {contact.get('last_name', '')} — {contact.get('title', '')}")
+                    print(f"    Contact (AI Ark): {contact.get('first_name', '')} {contact.get('last_name', '')} — {contact.get('title', '')}")
             except Exception as e:
-                print(f"    People search failed: {e}")
+                print(f"    AI Ark people search failed: {e}")
+
+            if not contact:
+                try:
+                    lf = ciq.leadsfactory_search(
+                        company_domains=[domain],
+                        personas=[{"job_title": t, "seniority": ["Director", "VP", "C-suite", "Owner"]}
+                                  for t in DECISION_MAKER_TITLES[:3]],
+                        max_persona_results=1,
+                    )
+                    contacts_list = lf.get("contacts", lf.get("results", lf.get("data", [])))
+                    if contacts_list and isinstance(contacts_list, list):
+                        contact = contacts_list[0]
+                        print(f"    Contact (LeadsFactory): {contact.get('first_name', '')} {contact.get('last_name', '')} — {contact.get('title', '')}")
+                except Exception as e:
+                    print(f"    LeadsFactory search failed: {e}")
 
             if not contact:
                 print(f"    No decision maker found, skipping")
@@ -198,8 +213,22 @@ def run_pipeline(max_contacts=15):
             phone = None
             if linkedin_url:
                 try:
-                    fe = ciq.fullenrich(linkedin_url)
-                    phone = fe.get("phone")
+                    fe = ciq.fullenrich_by_linkedin(linkedin_url,
+                                                     enrich_fields=["contact.phones"])
+                    data = fe.get("data", [{}])
+                    if data and isinstance(data, list):
+                        phone = data[0].get("phone")
+                    if phone:
+                        print(f"    Phone found: {phone}")
+                except Exception:
+                    pass
+            if not phone:
+                try:
+                    fe = ciq.fullenrich(first_name, last_name, domain,
+                                         enrich_fields=["contact.phones"])
+                    data = fe.get("data", [{}])
+                    if data and isinstance(data, list):
+                        phone = data[0].get("phone")
                     if phone:
                         print(f"    Phone found: {phone}")
                 except Exception:
