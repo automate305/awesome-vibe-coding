@@ -1,0 +1,66 @@
+# GTM Outbound Configuration — Automate305 HVAC Campaign
+# Edit these values to tune targeting, caps, and sequence timing.
+
+icp:
+  industry: "HVAC"
+  search_keywords:
+    - "HVAC"
+    - "air conditioning"
+    - "heating and cooling"
+    - "AC repair"
+    - "air conditioning contractor"
+  titles:
+    - "Owner"
+    - "President"
+    - "CEO"
+    - "General Manager"
+    - "Founder"
+  employee_range: [1, 200]
+  segments:
+    - residential
+    - commercial
+
+geo:
+  primary:
+    city: "Miami"
+    state: "FL"
+    zip: "33128"
+    radius_miles: 40
+  extended_areas:
+    - "Broward County, FL"
+    - "Palm Beach County, FL"
+  commercial_focus:
+    - "Downtown Miami"
+    - "Coral Gables"
+
+scoring:
+  min_google_review_score: 3.5
+  priority_factors:
+    - google_reviews_above_threshold
+    - has_website
+    - employee_count_over_5
+
+caps:
+  daily_search: 100
+  daily_enrich: 50
+  daily_email_send: 90
+  batch_size: 25
+
+sequence:
+  touches:
+    - { step: 1, channel: "email",    delay_days: 0,  template: "opener" }
+    - { step: 2, channel: "linkedin", delay_days: 1,  template: "connection_request" }
+    - { step: 3, channel: "email",    delay_days: 3,  template: "proof" }
+    - { step: 4, channel: "phone",    delay_days: 5,  template: "cold_call" }
+    - { step: 5, channel: "email",    delay_days: 7,  template: "free_website" }
+    - { step: 6, channel: "linkedin", delay_days: 9,  template: "followup_message" }
+    - { step: 7, channel: "email",    delay_days: 14, template: "breakup" }
+
+sender:
+  name: "Camilo"
+  company: "Automate305"
+  email: "cam@automate305.com"
+  website: "https://automate305.com"
+  tagline: "We automate HVAC businesses so owners can focus on growth."
+  signature: |
+    Camilo | Automate305

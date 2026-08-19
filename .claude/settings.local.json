@@ -3,7 +3,8 @@
     "allow": [
       "WebFetch(domain:github.com)",
       "Bash(npx awesome-lint:*)",
-      "Bash(gh repo view:*)"
+      "Bash(gh repo view:*)",
+      "mcp__Clay__find-and-enrich-contacts-at-company"
     ]
   }
 }
